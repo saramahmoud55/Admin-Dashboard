@@ -77,12 +77,12 @@ const closedMixin = (theme) => ({
 
 const Array1 = [
   { text: "Dashboard", icon: <HomeOutlined />, path: "/" },
+  { text: "Manage Team", icon: <PeopleOutlinedIcon />, path: "/team" },
   {
     text: "Contacts Information",
     icon: <ContactsOutlinedIcon />,
     path: "/contacts",
   },
-  { text: "Manage Team", icon: <PeopleOutlinedIcon />, path: "/team" },
   {
     text: "Invoices Balances",
     icon: <ReceiptOutlinedIcon />,

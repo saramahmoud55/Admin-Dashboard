@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import TopBar from './components/TopBar';
 import SideBar from './components/SideBar';
 import { getDesignTokens } from './theme';
+import { Outlet } from 'react-router-dom';
 
 
 
@@ -47,7 +48,7 @@ export default function MiniDrawer() {
      <SideBar open={open}  handleDrawerClose={handleDrawerClose}/>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <Typography paragraph>hello hello</Typography>
+        <Outlet/>
       </Box>
     </Box>
     </ThemeProvider>
