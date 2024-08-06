@@ -1,10 +1,16 @@
-import React from 'react'
+import { DataGrid } from '@mui/x-data-grid';
+import { columns, rows } from './data';
+
+
+
 
 function Team() {
   return (
-    <div>
-      Team page
-    </div>
+    <div style={{ height: 600, width: '100%' }}>
+    <DataGrid rows={rows} 
+// @ts-ignore
+    columns={columns} />
+  </div>
   )
 }
 
