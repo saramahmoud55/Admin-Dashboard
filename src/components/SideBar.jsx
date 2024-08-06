@@ -22,7 +22,9 @@ import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { grey } from '@mui/material/colors';
+
 const drawerWidth = 240;
 
 const DrawerHeader = styled("div")(({ theme }) => ({
@@ -100,9 +102,18 @@ const Array3 = [
   { text: "Line Chart ", icon: <TimelineOutlinedIcon />, path: "/line" },
   { text: "Geography Chart ", icon: <MapOutlinedIcon />, path: "/geography" },
 ];
+
 const SideBar = ({ open, handleDrawerClose }) => {
+
+
   const theme = useTheme();
   const navigate = useNavigate();
+  const location = useLocation()
+
+
+
+
+
   return (
     <Drawer variant="permanent" open={open}>
       <DrawerHeader>
@@ -157,6 +168,7 @@ const SideBar = ({ open, handleDrawerClose }) => {
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor:location.pathname===  item.path ? theme.palette.mode==="dark"? grey[800]:grey[300] :null
               }}
             >
               <ListItemIcon

@@ -112,7 +112,7 @@ const TopBar = ({ open, handleDrawerOpen,setMode }) => {
 
         <Box flexGrow={1} />
         <Stack direction={"row"}>
-          {theme.palette.mode ==="light" ? (
+          {theme.palette.mode ==="dark" ? (
             <IconButton onClick={()=>{
                 localStorage.setItem("currentMode",theme.palette.mode==="dark"?"light":"dark" )
                 setMode((prevMode) =>
