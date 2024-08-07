@@ -1,4 +1,4 @@
-import { width } from "@mui/system";
+import { Box, Typography } from "@mui/material";
 
 export const rows = [
     { id: 1, name: 'Jon snow', email: 'jonsnow@gmail.com', age: 35,phone: "(665)121-5454", access: "Admin" },
@@ -14,13 +14,6 @@ export const rows = [
 
 ];
 
-export const columns = [
-    { field: 'id', headerName: 'ID', width:33,align:"center",headerAlign:"center" },
-    { field: 'name', headerName: 'Name',flex: 1 ,align:"center",headerAlign:"center"},
-    { field: 'email', headerName: 'Email',flex: 1, align:"center",headerAlign:"center"},
-    { field: 'age', headerName: 'Age', },
-    { field: 'phone', headerName: 'Phone',flex: 1 ,align:"center",headerAlign:"center"},
-    { field: 'access', headerName: 'Access', flex: 1,align:"center",headerAlign:"center"},
-];
+
 
 
