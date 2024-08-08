@@ -80,9 +80,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const TopBar = ({ open, handleDrawerOpen,setMode }) => {
     const theme=useTheme()
   return (
-    <AppBar
-      // @ts-ignore
-      AppBar
+    <AppBar      
       position="fixed"
       // @ts-ignore
       open={open}
