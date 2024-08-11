@@ -9,7 +9,7 @@ function Invoices() {
      slots={{
       toolbar: GridToolbar,
     }}
-      rows={rows}
+      // rows={rows}
       // @ts-ignore
       columns={columns}
     />
