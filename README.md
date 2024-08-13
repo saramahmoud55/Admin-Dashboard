@@ -1,8 +1,28 @@
-# React + Vite
+Description:
+A real-time  dashboard built with React, showcasing statics , performance and user metrics.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tech Stack:
 
-Currently, two official plugins are available:
+    React
+    React-router-dom
+    Material-UI
+    Firebase (for real-time data)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Installation:
+npm start
+
+
+Project Structure:
+
+    src: Contains the main application code
+        components: Reusable UI components
+        pages: Individual page components
+        styles: Global styles
+    public: Static assets
+    package.json: Project dependencies and scripts
+
+Features:
+
+    Real-time  data visualization
+    User acquisition and retention metrics
+    Statics performance comparison.
