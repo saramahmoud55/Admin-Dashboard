@@ -18,10 +18,10 @@ function Form() {
         <TextField sx={{flex:1}} label="First Name" variant="filled" />
         <TextField sx={{flex:1}} label="Last Name" variant="filled" />
       </Stack>
-      {/* <TextField  label="Email" variant="filled" />
+      <TextField  label="Email" variant="filled" />
       <TextField  label="Contact Number" variant="filled" />
       <TextField  label="Address 1" variant="filled" />
-      <TextField  label="Address 2" variant="filled" /> */}
+      {/* <TextField  label="Address 2" variant="filled" /> */}
     </Box>
   );
 }
