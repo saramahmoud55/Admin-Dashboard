@@ -17,6 +17,9 @@ const data = [
     label: "User",
   },
 ];
+
+const regEmail =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const regContactNumber =/^((\+[1-9]{1,4}[-]?)|(\([0-9]{2,3}\)[-]?)|([0-9]{2,4})[-]?)*?[0-9]$/
 function Form() {
   const {
     register,
@@ -42,7 +45,7 @@ function Form() {
         <TextField
             error={Boolean(errors.firstName)}
           helperText={
-            Boolean(errors.firstName) ? "This filed is required" : null
+            Boolean(errors.firstName) ? "This filed is required &  minLength: 3" : null
           }
           {...register("firstName", { required: true, minLength: 3 })}
           sx={{ flex: 1 }}
@@ -50,9 +53,9 @@ function Form() {
           variant="filled"
         />
         <TextField
-          helperText={
-            Boolean(errors.lastName) ? "This filed is required" : null
-          }
+           helperText={
+             Boolean(errors.firstName) ? "This filed is required &  minLength: 3" : null
+           }
           {...register("lastName", { required: true, minLength: 3 })}
           error={Boolean(errors.lastName)}
           sx={{ flex: 1 }}
@@ -61,19 +64,21 @@ function Form() {
         />
       </Stack>
       <TextField
-        error={false}
         label="Email"
         variant="filled"
-        helperText="This filed is required"
-        {...register("firstName")}
-      />
+        error={Boolean(errors.email)}
+        helperText={
+          Boolean(errors.email) ? "This filed is required  & must be valid" : null
+        }        {...register("Email", { required: true, pattern:regEmail })}
+        />
       <TextField
-        error={false}
         label="Contact Number"
         variant="filled"
-        helperText="This filed is required"
-        {...register("firstName")}
-      />
+        error={Boolean(errors.contactNumber)}
+        helperText={
+          Boolean(errors.contactNumber) ? "This filed is required  & must be valid" : null
+        }        {...register("Contact Number", { required: true, pattern:regContactNumber})}
+              />
       <TextField label="Address 1" variant="filled" />
       <TextField label="Address 2" variant="filled" />
 
